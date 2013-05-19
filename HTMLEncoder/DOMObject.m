@@ -184,9 +184,8 @@
 
 
 - (NSString*)domObject{
-    @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                                   reason:[NSString stringWithFormat:@"%@ method needs to be overridden in a subclass.", NSStringFromSelector(_cmd)]
-                                 userInfo:nil];
+    return [NSString stringWithFormat:@"<%@%@%@>%@</%@>", self.htmlTag, self.classesToString, self.styleToString, self.content, self.htmlTag];
+
 }
 
 @end
