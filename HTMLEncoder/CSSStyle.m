@@ -54,7 +54,7 @@
             continue;
         }
         
-        [styleString appendFormat:@"%@: %@;", propertyKey, propertyValue];
+        [styleString appendFormat:@"%@: %@; ", propertyKey, propertyValue];
         attributesCounter++;
     }
     

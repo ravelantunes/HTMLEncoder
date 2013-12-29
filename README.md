@@ -2,6 +2,8 @@
 
 A simple Objective-C library that lets you create a HTML document/string, without having to manually deal with string manipulation.
 
+It can be useful when adding printing functionality to an app, and using this library to build the html to be printed.
+
 ## Example:
 
 ### Code
@@ -54,4 +56,37 @@ NSLog(@"Html: %@", customObject.domObject);
 
 ``` html
 Html: <custom>Hello world!</custom>
+```
+
+## CSS Style
+
+CSS styles can be strong typed by using the CSSStyle object.
+
+### Example
+``` objective-c
+CSSStyle *style = [[CSSStyle alloc] init];
+style.backgroundColor = @"red";
+
+NSLog(@"Style: %@", [style toString]);
+
+```
+### Output
+``` html
+Style: style="color: red; "
+```
+
+
+For properties not available on CSSStyle class, you can use addCustomProperty: withValue: method.
+
+### Example
+``` objective-c
+CSSStyle *style = [[CSSStyle alloc] init];
+[style addCustomProperty:@"box-shadow" withValue:@"10px 10px 5px #888888"];
+NSLog(@"Style: %@", [style toString]);
+```
+
+### Output
+
+``` html
+Style: style=" box-shadow: 10px 10px 5px #888888; "
 ```
