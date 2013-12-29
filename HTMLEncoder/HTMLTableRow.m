@@ -23,7 +23,7 @@
     return [self childrensToString];
 }
 
-- (NSString*)domObject{    
+- (NSString*)toString{    
     return [NSString stringWithFormat:@"<%@%@%@>%@</%@>", self.htmlTag, self.classesToString, self.styleToString, self.content, self.htmlTag];
 }
 

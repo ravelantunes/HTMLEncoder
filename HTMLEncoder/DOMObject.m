@@ -18,12 +18,6 @@
 
 @implementation DOMObject
 
-
-@synthesize content = _content;
-@synthesize htmlTag = _htmlTag;
-@synthesize style = _style;
-
-
 #pragma mark -
 #pragma mark Initializer methods
 
@@ -81,12 +75,18 @@
     
     NSMutableString *childrenString = [[NSMutableString alloc] init];
     for (DOMObject *child in _childNodes) {
-        [childrenString appendString:[child domObject]];
+        [childrenString appendString:[child toString]];
     }
     
     return childrenString;
 }
 
+- (NSString *)content{
+    if (!_content) {
+        return @"";
+    }
+    return _content;
+}
 
 #pragma mark -
 #pragma mark CSS Classes Methods
@@ -179,13 +179,15 @@
         return @"";
     }
     
-    return [_style styleToString];
+    return [self.style toString];
 }
 
 
-- (NSString*)domObject{
+- (NSString *)domObject{
+    return [self toString];
+}
+- (NSString*)toString{
     return [NSString stringWithFormat:@"<%@%@%@>%@</%@>", self.htmlTag, self.classesToString, self.styleToString, self.content, self.htmlTag];
-
 }
 
 @end

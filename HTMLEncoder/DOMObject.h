@@ -10,6 +10,13 @@
 
 @class CSSStyle;
 
+/*!
+ The main class to be used as a base class for all other dom object classes.
+ It will usually be subclassed to perform a more strong type implementation of
+ other objects, like HTMLTable and HTMLTableRow. In case some dom objects are
+ not yet implemented, one can initialize this object with initWithTag: method,
+ passing the desired tag as a string.
+ */
 @interface DOMObject : NSObject
 
 @property (strong, nonatomic) NSString *content;
@@ -17,7 +24,14 @@
 @property (strong, nonatomic) CSSStyle *style;
 
 
-//Initializer
+/*!
+ Use this method to initialize the object with the desired html tag.
+ 
+ @param tag The tag that will be used for the object. Ex.: passing "h2" will generate
+ a <h2></h2> tag.
+ 
+ @return An initialized dom object with the tag received on the string param.
+ */
 - (id)initWithTag:(NSString*)tag;
 
 
@@ -37,7 +51,17 @@
 //Style method
 - (NSString*)styleToString;
 
-//Abstract method to return self as a DOM Object string
-- (NSString*)domObject;
+
+/*!
+ Method to return the string representation of the dom object.
+ Deprecated in favor to toString as a more descriptive method name.
+ */
+- (NSString*)domObject __attribute((deprecated("use toString method instead")));
+
+/*!
+ Method to return the string representation of the dom object.
+ */
+- (NSString*)toString;
+
 
 @end

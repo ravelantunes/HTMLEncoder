@@ -15,7 +15,7 @@
 @synthesize width = _width;
 @synthesize height = _height;
 
-- (NSString*)styleToString{
+- (NSString*)toString{
 
     int attributesCounter = 0;
     NSMutableString *styleString = [[NSMutableString alloc] initWithString:@" style=\""];
@@ -54,6 +54,11 @@
     [styleString appendString:@"\""];
     
     return styleString;
+}
+
+
+- (NSString *)styleToString{
+    return [self toString];
 }
 
 @end

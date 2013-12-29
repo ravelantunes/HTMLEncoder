@@ -46,7 +46,7 @@
 }
 
 
-- (NSString*)domObject{
+- (NSString*)toString{
     
     NSString *rowSpanString = (_rowSpan > 1) ? [NSString stringWithFormat:@" rowSpan=\"%d\"", _rowSpan] : @"";
     
