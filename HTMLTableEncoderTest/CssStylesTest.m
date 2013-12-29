@@ -70,4 +70,12 @@
     NSString *expectedString = @" style=\"text-align: center; \"";
     STAssertTrue([expectedString isEqualToString:[style toString]], @"Expected %@, got %@", expectedString, [style toString]);
 }
+
+- (void)testCustomCssProperty{
+    CSSStyle *style = [[CSSStyle alloc] init];
+    [style addCustomProperty:@"box-shadow" withValue:@"10px 10px 5px #888888"];
+    
+    NSString *expectedString = @" style=\"box-shadow: 10px 10px 5px #888888;\"";
+    STAssertTrue([expectedString isEqualToString:[style toString]], @"Expected %@, got %@", expectedString, [style toString]);
+}
 @end

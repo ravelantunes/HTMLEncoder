@@ -8,12 +8,12 @@
 
 #import "CSSStyle.h"
 
-@implementation CSSStyle
+@interface CSSStyle() {
+    NSMutableDictionary *customStyles;
+}
+@end
 
-@synthesize color = _color;
-@synthesize backgroundColor = _backgroundColor;
-@synthesize width = _width;
-@synthesize height = _height;
+@implementation CSSStyle
 
 - (NSString*)toString{
 
@@ -45,11 +45,23 @@
         attributesCounter++;
     }
     
+    
+    //Iterate through the custom attributes (if any), and concatenate it to the string
+    for (NSString *propertyKey in customStyles) {
+        NSString *propertyValue = [customStyles objectForKey:propertyKey];
+        
+        if (!propertyKey || !propertyValue) {
+            continue;
+        }
+        
+        [styleString appendFormat:@"%@: %@;", propertyKey, propertyValue];
+        attributesCounter++;
+    }
+    
     //Check if had any attribute
     if (!attributesCounter) {
         return @"";
     }
-    
     
     [styleString appendString:@"\""];
     
@@ -61,4 +73,12 @@
     return [self toString];
 }
 
+
+- (void)addCustomProperty:(NSString *)propertyName withValue:(NSString *)propertyValue{
+    if (!customStyles) {
+        customStyles = [[NSMutableDictionary alloc] init];
+    }
+    [customStyles setObject:propertyValue forKey:propertyName];
+        
+}
 @end

@@ -32,4 +32,14 @@
  */
 - (NSString*)toString;
 
+
+/*!
+ Method to add custom property not implemented by the CSSStyle class.
+ 
+ @param propertyName The name of the property. Ex.: "background-image"
+ @param propertyValue The value of the property. Ex.: "url('http://myImage.com')"
+ 
+ */
+- (void)addCustomProperty:(NSString*)propertyName withValue:(NSString*)propertyValue;
+
 @end
