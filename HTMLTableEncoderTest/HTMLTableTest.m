@@ -6,19 +6,19 @@
 //  Copyright (c) 2013 Ravel Antunes. All rights reserved.
 //
 
-#import "HTMLTableEncoderTest.h"
+#import "HTMLTableTest.h"
 #import "HTMLTableCell.h"
 #import "HTMLTableRow.h"
 #import "HTMLTable.h"
 #import "CSSStyle.h"
 
-@interface HTMLTableEncoderTest (){
+@interface HTMLTableTest (){
     NSMutableArray *cells;
 }
 
 @end
 
-@implementation HTMLTableEncoderTest
+@implementation HTMLTableTest
 
 - (void)setUp
 {
@@ -59,14 +59,22 @@
     [table1 addChild:row1];
     
     //    NSLog(@"Test: %@", row1.childrensToString);
-    NSLog(@"Row html: %@", table1.domObject);
+    NSLog(@"Row html: %@", table1.toString);
     
     NSString *expectedString = @"<table><tr><td class=\"Class3, Class4, Class1, Class5, Class2\" style=\"color: red; background-color: blue; width: 200px; \">Cell Text</td></tr></table>";
     
-    STAssertTrue([expectedString isEqualToString:table1.domObject], @"String result is not correct.");
+    STAssertTrue([expectedString isEqualToString:table1.toString], @"String result is not correct.");
     
+}
+
+- (void)testCreateCustomTag{
+    DOMObject *h1 = [[DOMObject alloc] initWithTag:@"h1"];
+    NSString *expectedString = @"<h1></h1>";
+    STAssertTrue([[h1 toString] isEqualToString:expectedString], @"Expeted %@, got %@.", expectedString, [h1 toString]);
     
-    
+    h1.content = @"Hello world!";
+    expectedString = @"<h1>Hello world!</h1>";
+    STAssertTrue([[h1 toString] isEqualToString:expectedString], @"Expeted %@, got %@.", expectedString, [h1 toString]);
 }
 
 @end

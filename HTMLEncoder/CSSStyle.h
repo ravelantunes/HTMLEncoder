@@ -21,6 +21,15 @@
 //Text/Font
 @property (strong, nonatomic) NSString *textAlign;
 
-- (NSString*)styleToString;
+/*!
+ Method use to build an string from the properties.
+ Deprecated in fovor of toString, as it is a more descriptive method name.
+ */
+- (NSString*)styleToString __attribute((deprecated("use toString method")));
+
+/*!
+ Method use to build an string from the properties.
+ */
+- (NSString*)toString;
 
 @end

@@ -8,6 +8,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface HTMLTableEncoderTest : SenTestCase
+@interface HTMLTableTest : SenTestCase
 
 @end

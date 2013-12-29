@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80699CC21870D2F800B87817 /* CssStylesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80699CC11870D2F800B87817 /* CssStylesTest.m */; };
 		80A0C9A716B8D2F1007F0AC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A0C9A616B8D2F1007F0AC0 /* Foundation.framework */; };
 		80A0C9AA16B8D2F1007F0AC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A0C9A916B8D2F1007F0AC0 /* main.m */; };
 		80A0C9AE16B8D2F1007F0AC0 /* HTMLEncoder.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 80A0C9AD16B8D2F1007F0AC0 /* HTMLEncoder.1 */; };
@@ -18,7 +19,7 @@
 		80A0C9CE16BA0283007F0AC0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A0C9CD16BA0283007F0AC0 /* SenTestingKit.framework */; };
 		80A0C9D016BA0283007F0AC0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A0C9CF16BA0283007F0AC0 /* Cocoa.framework */; };
 		80A0C9DA16BA0283007F0AC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80A0C9D816BA0283007F0AC0 /* InfoPlist.strings */; };
-		80A0C9DD16BA0283007F0AC0 /* HTMLTableEncoderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A0C9DC16BA0283007F0AC0 /* HTMLTableEncoderTest.m */; };
+		80A0C9DD16BA0283007F0AC0 /* HTMLTableTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A0C9DC16BA0283007F0AC0 /* HTMLTableTest.m */; };
 		80A0C9E216BA033B007F0AC0 /* HTMLTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A0C9B516B8D30D007F0AC0 /* HTMLTableCell.m */; };
 		80A0C9E316BA033B007F0AC0 /* HTMLTableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A0C9B616B8D30D007F0AC0 /* HTMLTableRow.m */; };
 		80A0C9E416BA033B007F0AC0 /* HTMLTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A0C9B816B8D30D007F0AC0 /* HTMLTable.m */; };
@@ -41,6 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		80699CC11870D2F800B87817 /* CssStylesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CssStylesTest.m; sourceTree = "<group>"; };
 		80A0C9A216B8D2F1007F0AC0 /* HTMLEncoder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HTMLEncoder; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A0C9A616B8D2F1007F0AC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		80A0C9A916B8D2F1007F0AC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -64,8 +66,8 @@
 		80A0C9D416BA0283007F0AC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		80A0C9D716BA0283007F0AC0 /* HTMLTableEncoderTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HTMLTableEncoderTest-Info.plist"; sourceTree = "<group>"; };
 		80A0C9D916BA0283007F0AC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		80A0C9DB16BA0283007F0AC0 /* HTMLTableEncoderTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMLTableEncoderTest.h; sourceTree = "<group>"; };
-		80A0C9DC16BA0283007F0AC0 /* HTMLTableEncoderTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTMLTableEncoderTest.m; sourceTree = "<group>"; };
+		80A0C9DB16BA0283007F0AC0 /* HTMLTableTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMLTableTest.h; sourceTree = "<group>"; };
+		80A0C9DC16BA0283007F0AC0 /* HTMLTableTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTMLTableTest.m; sourceTree = "<group>"; };
 		80A0C9DE16BA0283007F0AC0 /* HTMLTableEncoderTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HTMLTableEncoderTest-Prefix.pch"; sourceTree = "<group>"; };
 		80A0C9EF16BB79F9007F0AC0 /* HTMLTableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLTableHeader.h; sourceTree = "<group>"; };
 		80A0C9F016BB79F9007F0AC0 /* HTMLTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLTableHeader.m; sourceTree = "<group>"; };
@@ -173,8 +175,9 @@
 		80A0C9D516BA0283007F0AC0 /* HTMLTableEncoderTest */ = {
 			isa = PBXGroup;
 			children = (
-				80A0C9DB16BA0283007F0AC0 /* HTMLTableEncoderTest.h */,
-				80A0C9DC16BA0283007F0AC0 /* HTMLTableEncoderTest.m */,
+				80A0C9DB16BA0283007F0AC0 /* HTMLTableTest.h */,
+				80699CC11870D2F800B87817 /* CssStylesTest.m */,
+				80A0C9DC16BA0283007F0AC0 /* HTMLTableTest.m */,
 				80A0C9D616BA0283007F0AC0 /* Supporting Files */,
 			);
 			path = HTMLTableEncoderTest;
@@ -301,12 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80A0C9DD16BA0283007F0AC0 /* HTMLTableEncoderTest.m in Sources */,
+				80A0C9DD16BA0283007F0AC0 /* HTMLTableTest.m in Sources */,
 				80A0C9E216BA033B007F0AC0 /* HTMLTableCell.m in Sources */,
 				80A0C9E316BA033B007F0AC0 /* HTMLTableRow.m in Sources */,
 				80A0C9E416BA033B007F0AC0 /* HTMLTable.m in Sources */,
 				80A0C9E516BA033B007F0AC0 /* CSSStyle.m in Sources */,
 				80A0C9E616BA033B007F0AC0 /* DOMObject.m in Sources */,
+				80699CC21870D2F800B87817 /* CssStylesTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
